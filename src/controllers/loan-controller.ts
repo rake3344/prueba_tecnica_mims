@@ -32,7 +32,7 @@ export const returnBookFromUserController = async (req: Request, res: Response) 
         } else if (returnDate == "This book has already been returned") {
             return res.status(409).json({ message: returnDate });
         }
-        res.status(200).json(returnDate);
+        res.status(200).json({ message: "Book returned successfully" });
     } catch (error: any) {
         res.status(500).json({ message: error.message });
     }

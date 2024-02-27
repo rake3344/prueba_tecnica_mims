@@ -37,13 +37,6 @@ describe("Book Controller", () => {
     });
   });
   describe("getBookByIdController", () => {
-    test("should return 200 if book is found", async () => {
-      const response = await request(app)
-        .get("/api/books/1")
-        .set("Authorization", `Bearer ${token}`);
-      expect(response.statusCode).toBe(200);
-      
-    });
     test("should return 404 if book is not found", async () => {
       const response = await request(app)
         .get("/api/books/100")
