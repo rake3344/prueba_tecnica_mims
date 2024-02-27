@@ -32,8 +32,8 @@ export const purchaseController = async (req: Request, res: Response) => {
                 }
             ],
             mode: "payment",
-            success_url: "http://localhost:3000/api/success",
-            cancel_url: "http://localhost:3000/api/cancel"
+            success_url: "https://prueba-tecnica-mims.onrender.com/api/success",
+            cancel_url: "https://prueba-tecnica-mims.onrender.com/api/cancel"
         })
 
         res.status(200).json({"payment_url": session.url});
